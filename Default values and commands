@@ -1,0 +1,8 @@
+The default values used in the script are:
+Chatopentime = 1000 ; 			Defines how long to wait for the chat to open (default = 1 second)
+Scriptlooptime = 60000 ; 		Defines how long to wait until the afk script restarts (default = 60 seconds)
+Autoselltime = 20000			Defines how long to wait until the sell command is run again (default = 20 seconds)
+
+Default commands used are:
+/joinqueue [realm]
+/sell all
