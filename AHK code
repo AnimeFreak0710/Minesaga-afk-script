@@ -1,3 +1,5 @@
+This is the code I used to make this script work. I know it's not optimal but I made this on the go, will improve it later.
+
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 
