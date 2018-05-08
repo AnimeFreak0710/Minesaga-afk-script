@@ -12,7 +12,7 @@ I commented on the kingdomafk script to show you what does what so you can edit 
 
 You can change the waittime my changing the value of Scriptlooptime, which is the waittime in milliseconds.
 
-For now it doesn't allow use on multiple accounts, only 1 minecraft window can be open at once. I might add multiaccount support later if I feel like it.
+For now it doesn't allow use on multiple accounts, only 1 minecraft window can be open at once and it must be the active window (can't be paused or in inventory as well). I might add multiaccount support later if I feel like it.
 
 You'll need the software AutoHotKey from https://autohotkey.com/ to run and/or compile the script.
 
