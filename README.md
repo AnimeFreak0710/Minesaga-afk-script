@@ -16,7 +16,7 @@ You can change the waittime my changing the value of Scriptlooptime, which is th
 
 For now it doesn't allow use on multiple accounts, only 1 minecraft window can be open at once and it must be the active window (can't be paused or in inventory as well). I might add multiaccount support later if I feel like it.
 
-You'll need the software AutoHotKey from https://autohotkey.com/ to run and/or compile the script.
+You'll need the software AutoHotKey from https://autohotkey.com/download to run and/or compile the script.
 
 I'll include an .exe version of the script so you can run it without downloading any additional software, but I recommend compiling the script yourself so you can edit it and check for errors.
 
