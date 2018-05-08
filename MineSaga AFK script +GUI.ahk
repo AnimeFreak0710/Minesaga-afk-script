@@ -1,14 +1,14 @@
-; THIS IS A BETA BUILD, IT MIGHT NOT WORK!
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 #singleinstance force
+
+; -----Vars-----
 
 Chatopentime = 1000 ; 			Defines how long to wait for the chat to open (default = 1 second)
 Scriptlooptime = 60000 ; 		Defines how long to wait until the afk script restarts (default = 60 seconds)
 Autoselltime = 20000 ; 			Defines how long to wait until the sell command is run again (default = 20 seconds)
 
-
-
+; -----GUI-----
 
 Gui, Font, cWhite
 Gui, Add, Text, x10 y10, Press the command you want to use
@@ -32,7 +32,7 @@ GuiClose:
 	Return
 	
 
-	
+; -----Loops-----	
 Autosell:
 	loop
 	{
