@@ -21,3 +21,5 @@ I'll include an .exe version of the script so you can run it without downloading
 Any feedback is appreciated!
 
 Enjoy the script! - AnimeFreak0710 (IGN: Luke_van_R)
+
+P.S. I'm currently testing the GUI version, it'll probably become a full release later on
