@@ -4,5 +4,8 @@ Scriptlooptime = 60000 ; 		Defines how long to wait until the afk script restart
 Autoselltime = 20000			Defines how long to wait until the sell command is run again (default = 20 seconds)
 
 Default commands used are:
-/joinqueue [realm]
-/sell all
+[realm]afk -> sends /joinqueue [realm]
+autosell -> sends /sell all
+pausescript -> pauses the script
+stopscript -> resets the script
+exitscript -> terminates the script
