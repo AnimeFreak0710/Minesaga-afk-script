@@ -1,4 +1,5 @@
-﻿#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+; THIS IS A BETA BUILD, IT MIGHT NOT WORK!
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 #singleinstance force
 
