@@ -16,9 +16,9 @@ Scriptlooptime = 60000 ; 		Defines a time in ms to wait until the script restart
 ::kingdomafk:: ;			Type this while ingame to start the script
 loop ; 					Starts a loop
 {
-send t ; 				Opens the chat
-sleep 1000 ; 				Waits 1 second to make sure the chat gets opened
-send /joinqueue kingdom ; 		Types the command to join the server
+send / ; 				Opens the chat
+sleep 500 ; 				Waits 1 second to make sure the chat gets opened
+send joinqueue kingdom ; 		Types the command to join the server
 send {enter} ; 				Sends the command
 sleep %Scriptlooptime% ;		Waits for the defined time and then starts over
 }
@@ -27,9 +27,9 @@ return ; 				Closes the loop
 ::spaceafk::
 loop
 {
-send t
+send /
 sleep 1000
-send /joinqueue space
+send joinqueue space
 send {enter}
 sleep %Scriptlooptime%
 }
@@ -38,9 +38,9 @@ return
 ::westernafk::
 loop
 {
-send t
+send /
 sleep 1000
-send /joinqueue western
+send joinqueue western
 send {enter}
 sleep %Scriptlooptime%
 }
@@ -49,9 +49,9 @@ return
 ::utopiaafk::
 loop
 {
-send t
+send /
 sleep 1000
-send /joinqueue utopia
+send joinqueue utopia
 send {enter}
 sleep %Scriptlooptime%
 }
@@ -60,9 +60,9 @@ return
 ::mysticafk::
 loop
 {
-send t
+send /
 sleep 1000
-send /joinqueue mystic
+send joinqueue mystic
 send {enter}
 sleep %Scriptlooptime%
 }
@@ -71,9 +71,9 @@ return
 ::jurassicafk::
 loop
 {
-send t
+send /
 sleep 1000
-send /joinqueue jurassic
+send joinqueue jurassic
 send {enter}
 sleep %Scriptlooptime%
 }
@@ -82,9 +82,9 @@ return
 ::blizzardafk::
 loop
 {
-send t
+send /
 sleep 1000
-send /joinqueue blizzard
+send joinqueue blizzard
 send {enter}
 sleep %Scriptlooptime%
 }
