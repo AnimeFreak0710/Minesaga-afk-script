@@ -3,27 +3,29 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 #singleinstance force
 
 ; -----Vars-----
+ChatOpenTime := 1000
+CommandLoopTime := 60000
+AutoSellTime := 20000
 
-Chatopentime = 1000 ; 			Defines how long to wait for the chat to open (default = 1 second)
-Scriptlooptime = 60000 ; 		Defines how long to wait until the afk script restarts (default = 60 seconds)
-Autoselltime = 20000 ; 			Defines how long to wait until the sell command is run again (default = 20 seconds)
 
 ; -----GUI-----
-
-Gui, Font, cWhite
-Gui, Add, Text, x10 y10, Press the command you want to use
 Gui, +AlwaysOnTop
-Gui, Color, Black
-Gui, Show, h500 w500 Center, Minesaga afk script
-Gui, Add, Button, x10 y50 w480 gScript_off, Reset
-Gui, Add, Button, x10 y90 w480 gAutosell, Autosell
-Gui, Add, Button, x10 y130 w480 gKingdomafk, AFK Kingdom
-Gui, Add, Button, x10 y170 w480 gSpaceafk, AFK Space
-Gui, Add, Button, x10 y210 w480 gWesternafk, AFK Western
-Gui, Add, Button, x10 y250 w480 gUtopiaafk, AFK Utopia
-Gui, Add, Button, x10 y290 w480 gMysticafk, AFK Mystic
-Gui, Add, Button, x10 y330 w480 gJurassicafk, AFK Jurassic
-Gui, Add, Button, x10 y370 w480 gBlizzardafk, AFK Blizzard
+Gui, Margin, 10, 10
+Gui, Show, w500 h500, Minesaga afk script
+Gui, Add, Text, x10 y10, Enter the command you want to use and click CommandLoop to start
+Gui, Add, Text, x10 y50, Command: /
+Gui, Add, Edit, x70 y47 w400 vCommand gSubmit_All, (Put command here)
+Gui, Add, Button, x10 y90 w480 gCommandLoop, Start
+Gui, Add, Button, x10 y130 w480 gAutosell, Autosell on
+Gui, Add, Button, x10 y170 w480 gScript_off, Reset script
+Gui, Add, Text, x200 y260, Delay timers (in ms)
+Gui, Add, Text, x10 y280, ChatOpenTime
+Gui, Add, Text, x200 y280, CommandLoopTime
+Gui, Add, Text, x390 y280, AutoSellTime
+Gui, Add, Edit, x10 y300 w100 vChatopentime gSubmit_All, %ChatOpenTime%
+Gui, Add, Edit, x200 y300 w100 vCommandLoopTime gSubmit_All, %CommandLoopTime%
+Gui, Add, Edit, x390 y300 w100 vAutoselltime gSubmit_All, %AutoSellTime%
+
 
 return
 
@@ -31,7 +33,6 @@ GuiClose:
 	Exitapp
 	Return
 	
-
 ; -----Loops-----	
 Autosell:
 	loop
@@ -44,84 +45,23 @@ Autosell:
 	}
 	return
 	
-Kingdomafk:
+CommandLoop:
+{
 	loop
 	{
 	send /
 	sleep %Chatopentime%
-	send joinqueue Kingdom
+	send %Command%
 	send {enter}
-	sleep %Scriptlooptime%
+	sleep %Commandlooptime%
 	}
 	return
+}	
 
-	
-Spaceafk:
-	loop
-	{
-	send /
-	sleep %Chatopentime%
-	send joinqueue space
-	send {enter}
-	sleep %Scriptlooptime%
-	}
-	return
-
-Westernafk:
-	loop
-	{
-	send /
-	sleep %Chatopentime%
-	send joinqueue western
-	send {enter}
-	sleep %Scriptlooptime%
-	}
-	return
-
-Utopiaafk:
-	loop
-	{
-	send /
-	sleep %Chatopentime%
-	send joinqueue utopia
-	send {enter}
-	sleep %Scriptlooptime%
-	}
-	return
-
-Mysticafk:
-	loop
-	{
-	send /
-	sleep %Chatopentime%
-	send joinqueue mystic
-	send {enter}
-	sleep %Scriptlooptime%
-	}
-	return
-
-Jurassicafk:
-	loop
-	{
-	send /
-	sleep %Chatopentime%
-	send joinqueue jurassic
-	send {enter}
-	sleep %Scriptlooptime%
-	}
-	return
-
-Blizzardafk:
-	loop
-	{
-	send /
-	sleep %Chatopentime%
-	send joinqueue blizzard
-	send {enter}
-	sleep %Scriptlooptime%
-	}
-	return
-	
 Script_off:
 	reload
+	return
+	
+Submit_All:
+	Gui, Submit, NoHide
 	return
